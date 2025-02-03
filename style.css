@@ -1,135 +1,125 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
+body{
     background-image: linear-gradient(120deg, #6a11cb, #2575fc);
     color: white;
     font-family: "Poppins", sans-serif;
     min-height: 100vh;
 }
 
-header {
+header{
     font-size: 1.3rem;
-    padding: 1rem;
-    text-align: center;
 }
 
-header, form {
+header, form{
+    min-height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-form {
-    flex-direction: column;
-    min-width: 80%;
-}
-
-form input, form button {
-    padding: 0.6rem;
-    font-size: 1rem;
+form input, form button{
+    padding: 0.4rem;
+    font-size: 1.6rem;
     border: none;
     background: white;
-    width: 100%;
-    margin: 0.2rem 0;
 }
 
-form button {
+form button{
     color: #8e44ad;
     background: white;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
-form button:hover {
+form button:hover{
     background: #2575fc;
     color: white;
 }
 
-.todo-container {
+.todo-container{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.todo-list {
-    width: 90%;
+.todo-list{
+    min-width: 30%;
     list-style: none;
-    padding: 0;
-    margin: 0.5rem 0;
 }
 
-.todo {
-    margin: 0.4rem 0;
+.todo{
+    margin: 0.4rem;
     background: white;
     color: black;
-    font-size: 1rem;
+    font-size: 1.3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem;
     transition: all 0.5s ease;
 }
 
-.todo li {
+.todo li{
     flex: 1;
-    padding: 0 0.5rem;
 }
 
-.trash-btn, .complete-btn {
+.trash-btn, .complete-btn{
     background: #e74c3c;
     color: white;
     border: none;
     padding: 0.8rem;
     cursor: pointer;
     font-size: 0.9rem;
-    margin-left: 0.2rem;
 }
 
-.complete-btn {
+.complete-btn{
     background-color: #27ae60;
 }
 
-.todo-item {
+.todo-item{
     padding: 0rem 0.4rem;
 }
 
-.fa-trash, .fa-check {
+.fa-trash, .fa-check{
     pointer-events: none;
 }
 
-.completed {
+.completed{
     text-decoration: line-through;
     opacity: 0.5;
 }
 
-.fall {
+.fall{
     transform: translate(8rem) rotate(20deg);
     opacity: 0;
 }
 
-.select {
-    width: 100%;
-    position: relative;
-    margin: 0.8rem 0;
-}
-
-select {
+select{
     -webkit-appearance: none;
     -moz-appearance: none;
     outline: none;
     border: none;
+}
+
+.select{
+    margin: 0.8rem;
+    position: relative;
+    overflow: hidden;
+}
+
+select{
     color: #8e44ad;
-    width: 100%;
+    width: 9rem;
     cursor: pointer;
     padding: 0.8rem;
     font-size: 0.9rem;
 }
 
-.select::after {
+.select::after{
     content: "\25BC";
     position: absolute;
     background: #8e44ad;
@@ -139,10 +129,11 @@ select {
     pointer-events: none;
 }
 
-.select:hover::after {
+.select:hover::after{
     background: white;
     color: #8e44ad;
 }
+
 
 @media (max-width: 768px) {
     header {
